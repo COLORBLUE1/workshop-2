@@ -1,7 +1,10 @@
+import { Navbar } from "../../Block/Navbar";
+import { Main } from "./Main";
 
-
-export function Home.one (){
-
-return ();
-
+export function Homeone() {
+  return (
+    <div>
+      <Main />
+    </div>
+  );
 }
