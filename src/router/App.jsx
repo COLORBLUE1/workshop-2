@@ -1,20 +1,19 @@
 import { useState } from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Login from "../assets/Componentes/Login";
+import CreateAcount from "../assets/Componentes/CreateAcount";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Welcome />} />
-            <Route path="react" element={<ReactComponent />} />
-            <Route path="vite" element={<ViteComponent />} />
-          </Route>
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/create-account" element={<CreateAcount />} />
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </>
   );
 }

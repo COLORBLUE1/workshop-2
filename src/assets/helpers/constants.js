@@ -1,0 +1,1 @@
+export const urlAPI = "https://api-socialmediaapp-render.onrender.com/usuarios"
