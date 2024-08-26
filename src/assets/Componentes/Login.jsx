@@ -31,14 +31,15 @@ const Login = () => {
 
         for (let index = 0; index < data.length; index++) {
             const element = data[index];
-            console.log("entro al for", index, data.length);
-
                       
             if (formValues.correo === element.correo && formValues.pass === element.contraseña) {
+                localStorage.setItem("user", JSON.stringify(element));
                 console.log("el usuario existe")
+                break;
                 // navigate("/validation")
             } else if (index === data.length - 1 && (formValues.correo !== element.correo || formValues.pass !== element.contraseña)) {
                 alert("verifique sus datos, el correo o la contraseña estan incorrectas")
+                break;
             }
             
         }
