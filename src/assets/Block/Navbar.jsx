@@ -7,6 +7,8 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { ContenedorNavber } from "../Styles/styledone.js";
 import { useNavigate } from "react-router";
+import { BsHouseFill, BsBellFill, BsPlusLg, BsSearch } from "react-icons/bs";
+import { Avatar } from "@mui/material";
 
 export function Navbar() {
   const [value, setValue] = React.useState("recents");
@@ -53,26 +55,30 @@ export function Navbar() {
         value={value}
         onChange={handleChange}
       >
-        <BottomNavigationAction label="." value="main" icon={<RestoreIcon />} />
+        <BottomNavigationAction label="." value="main" icon={<BsHouseFill />} />
         <BottomNavigationAction
-          label="Favorites"
-          value="favorites"
-          icon={<FavoriteIcon />}
+          label="buscar"
+          value="buscar"
+          icon={<BsSearch />}
         />
         <BottomNavigationAction
-          label="Nearby"
-          value="nearby"
-          icon={<LocationOnIcon />}
+          label="publicar"
+          value="publicar"
+          icon={<BsPlusLg />}
         />
         <BottomNavigationAction
-          label="Folder"
+          label="notificacion"
           value="folder"
-          icon={<FolderIcon />}
+          icon={<BsBellFill />}
         />
         <BottomNavigationAction
-          label="Folder"
-          value="folder"
-          icon={<FolderIcon />}
+          label="cuenta"
+          value="cuenta"
+          icon={<Avatar
+            alt="Remy Sharp"
+            src="/static/images/avatar/1.jpg"
+            sx={{ width: 30, height: 30 }}
+          />}
         />
       </BottomNavigation>
     </ContenedorNavber>
